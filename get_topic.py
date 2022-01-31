@@ -12,6 +12,7 @@ title = soup.find('title').get_text()
 document = ' '.join([p.get_text() for p in soup.find_all('p')])
 
 stop = stopwords.words(‘english’)
+NOUNS = ['NN', 'NNS', 'NNP', 'NNPS']
 
 document = re.sub(‘[^A-Za-z .-]+’, ‘ ‘, document)
 document = ‘ ‘.join(document.split())
